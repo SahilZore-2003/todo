@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.center{
+    text-align: center;
+}
+
+.container{
+    min-height: 100vh;
+    
+}
+
+h1{
+    letter-spacing: 1.5;
+}
+
+.white{
+    color: white;
+}
+
+.to-do-app{
+    max-width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: black;
+    min-height: 90vh;
+    /* box-shadow: inset 5px 5px 10px black; */
+    padding: 20px 30px 40px;
+}
+
+.row{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#inputbox{
+    padding: .5rem;
+    border-radius: 10px;
+    flex: 1;
+    transition: .1s ease;
+    font-weight: bold;
+}
+#inputbox:focus{
+    border: 3px solid #153677;
+}
+
+#addbtn{
+    background-color: #ff5945;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .2s  linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addbtn:hover{
+    font-size: 45px;
+}
+
+#listcontainer{
+    padding: 10px 0;
+}
+
+li{
+    list-style:none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url('unchecked.png');
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+
+}
+
+ul li.checked::before{
+    background-image: url('checked.png');
+}
+
+li span{
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    padding: 5px;
+    color: #555;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+li span:hover{
+    color: #ff5945;
+
+}
